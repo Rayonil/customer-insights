@@ -12,23 +12,31 @@ Entender quem são os clientes, como compram e o que gera receita, respondendo p
 
 🔄 Pipeline do projeto
  Dados brutos (Excel/CSV)
+ 
           │
           ▼
+          
  ┌─────────────────────┐
  │ 1. Python / Jupyter │  Limpeza, padronização e tratamento de nulos
  └─────────────────────┘
+ 
           │
           ▼
+          
  ┌─────────────────────┐
  │ 2. SQL Server       │  Carga dos dados e 10 consultas de negócio
  └─────────────────────┘
+ 
           │
           ▼
+          
  ┌─────────────────────┐
  │ 3. Power BI         │  Dashboard interativo com KPIs e segmentações
  └─────────────────────┘
+ 
 
  📂 Estrutura do repositório
+ 
 customer-behavior-analysis/
 ├── data/
 │   └── customer_shopping_behavior.csv     # Base de dados (3.900 compras, 18 colunas)
