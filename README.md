@@ -15,7 +15,6 @@ Entender quem são os clientes, como compram e o que gera receita, respondendo p
  
           │
           ▼
-          
  ┌─────────────────────┐
  │ 1. Python / Jupyter │  Limpeza, padronização e tratamento de nulos
  └─────────────────────┘
@@ -28,7 +27,6 @@ Entender quem são os clientes, como compram e o que gera receita, respondendo p
  └─────────────────────┘
  
           │
-          ▼
           
  ┌─────────────────────┐
  │ 3. Power BI         │  Dashboard interativo com KPIs e segmentações
@@ -37,18 +35,7 @@ Entender quem são os clientes, como compram e o que gera receita, respondendo p
 
  📂 Estrutura do repositório
  
-customer-behavior-analysis/
-├── data/
-│   └── customer_shopping_behavior.csv     # Base de dados (3.900 compras, 18 colunas)
-├── notebooks/
-│   └── customer_data_cleaning.ipynb        # Etapa 1: limpeza com pandas
-├── sql/
-│   └── SQLQuery_customer.sql               # Etapa 2: consultas de negócio
-├── dashboard/
-│   └── customer_behavior_dashboard.pbix    # Etapa 3: dashboard Power BI
-├── images/
-│   └── dashboard.png                       # Print do dashboard
-└── README.md
+
 
 🗂️ Sobre os dados
 
@@ -98,6 +85,8 @@ Q10	Contribuição de cada faixa etária na receita	GROUP BY, ORDER BY
 
 Arquivo: customer_behavior_dashboard.pbix
 
+<img width="1307" height="736" alt="Screenshot 2026-10-02 152708" src="https://github.com/user-attachments/assets/0afa8d1f-4863-49cb-bb51-8ee5a1b56268" />
+
 O dashboard reúne os principais KPIs (receita total, ticket médio, número de clientes, avaliação média) e permite filtrar por gênero, categoria, faixa etária, status de assinatura e tipo de envio.
 
 💡 Principais insights
@@ -112,3 +101,5 @@ Rever a proposta de valor da assinatura, que hoje não se traduz em gasto maior 
 Criar ações de aquisição de novos clientes, já que a base depende fortemente de clientes antigos.
 Desenvolver campanhas direcionadas ao público feminino, com potencial de crescimento de receita.
 Usar os produtos mais bem avaliados como vitrine em campanhas e promoções.
+
+
