@@ -11,34 +11,15 @@ Entender quem são os clientes, como compram e o que gera receita, respondendo p
 - Como os clientes se distribuem entre novos, recorrentes e fiéis?
 
 🔄 Pipeline do projeto
- Dados brutos (Excel/CSV)
- 
-          │
-          ▼
- ┌─────────────────────┐
- │ 1. Python / Jupyter │  Limpeza, padronização e tratamento de nulos
- └─────────────────────┘
- 
-          │
-          ▼
-          
- ┌─────────────────────┐
- │ 2. SQL Server       │  Carga dos dados e 10 consultas de negócio
- └─────────────────────┘
- 
-          │
-          
- ┌─────────────────────┐
- │ 3. Power BI         │  Dashboard interativo com KPIs e segmentações
- └─────────────────────┘
- 
+
+<img width="615" height="575" alt="fluxo_projeto" src="https://github.com/user-attachments/assets/8eb49b8d-051f-4467-b8eb-1da9295c2f5d" />
+
 
  📂 Estrutura do repositório
  
-
+<img width="772" height="670" alt="estrutura_projeto" src="https://github.com/user-attachments/assets/a3e958a7-1f53-47b9-8244-c373dfc66f0d" />
 
 🗂️ Sobre os dados
-
 A base contém 3.900 registros de compra com 18 atributos, entre eles:
 
 Grupo	Colunas
@@ -50,7 +31,6 @@ Comportamento	Previous Purchases, Frequency of Purchases, Review Rating
 Os produtos estão divididos em quatro categorias: Clothing, Footwear, Outerwear e Accessories. A idade dos clientes vai de 18 a 70 anos.
 
 1️⃣ Etapa 1: Limpeza de dados com Python
-
 Notebook: customer_data_cleaning.ipynb
 
 Principais tratamentos:
@@ -63,8 +43,8 @@ Tratamento de valores ausentes (ex.: Review Rating possui 37 nulos na base origi
 Renomeação das colunas para snake_case (purchase_amount, review_rating, etc.).
 Criação da coluna age_group (faixa etária) para as análises seguintes.
 Exportação da base tratada para o SQL Server.
-2️⃣ Etapa 2: Análise com SQL Server
 
+2️⃣ Etapa 2: Análise com SQL Server
 Script: SQLQuery_customer.sql
 
 Com os dados carregados na tabela customer, foram respondidas 10 perguntas de negócio:
@@ -82,7 +62,6 @@ Q9	Compradores recorrentes tendem a assinar?	Filtro + agregação
 Q10	Contribuição de cada faixa etária na receita	GROUP BY, ORDER BY
 
 3️⃣ Etapa 3: Dashboard no Power BI
-
 Arquivo: customer_behavior_dashboard.pbix
 
 <img width="1307" height="736" alt="Screenshot 2026-10-02 152708" src="https://github.com/user-attachments/assets/0afa8d1f-4863-49cb-bb51-8ee5a1b56268" />
@@ -96,6 +75,7 @@ Assinatura não aumenta o ticket médio: assinantes gastam em média US$ 59,49, 
 Frete Express tem ticket um pouco maior (US$ 60,48) que o Standard (US$ 58,46).
 A base é majoritariamente fiel: cerca de 3.100 clientes têm mais de 10 compras anteriores, contra apenas 83 clientes novos.
 Produtos mais bem avaliados: Gloves, Sandals e Boots, todos com média próxima de 3,8.
+
 🎯 Recomendações de negócio
 Rever a proposta de valor da assinatura, que hoje não se traduz em gasto maior por compra.
 Criar ações de aquisição de novos clientes, já que a base depende fortemente de clientes antigos.
